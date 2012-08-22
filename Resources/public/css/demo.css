@@ -1,0 +1,74 @@
+
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+
+.log_container{
+	border:1px solid;
+	margin:0 auto;
+	height:200px;
+	width:400px;
+	padding:10px 10px 10px 10px;
+}
+.log_form{
+	float:right;
+}
+.connect_with{
+	height:30px;
+	width:100px;
+	margin:20px 0 0 0;
+	float:left;
+}
+#fos_user_registration_form_username{
+	margin:10px 10px 10px 80px;
+}
+#fos_user_registration_form_email{
+	margin:15px 10px 10px 108px;
+}
+#fos_user_registration_form_plainPassword_first{
+	margin:15px 10px 10px 79px;
+}
+#fos_user_registration_form_plainPassword_second{
+	margin:15px 10px 10px 27px;
+}
+.fos_user_registration{
+	width:500px;
+	border:1px solid;
+	margin:0 auto;
+	min-height:300px;
+	padding-left:30px;
+}
+.fos_user_registration_register{
+	float:right;
+	margin-top:20px;
+}
+.fos_user_registration_btn{
+	margin:20px 0 0 240px;
+}
+.fos_user_user_show{
+	margin:0 auto;
+}
+.password_req{
+	width:300px;
+	border:1px solid;
+	margin:0 auto;
+	min-height:50px;
+}
+.password_reset{
+	width:350px;
+	border:1px solid;
+	margin:0 auto;
+	min-height:150px;
+}
+#fos_user_resetting_form_new_first{
+	margin:10px 10px 10px 80px;
+}
+#fos_user_resetting_form_new_second{
+	margin:10px 10px 10px 60px;
+}
+.reset_btn{
+	margin-left:280px;
+}
+
+
+
+
+

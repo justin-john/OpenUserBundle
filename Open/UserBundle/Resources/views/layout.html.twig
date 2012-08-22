@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" href="{{ asset('bundles/sewolabsuser/css/demo.css') }}" type="text/css" media="all" />
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+               {# {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} | #}
+                
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ ''|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </div>
+
+        {% for key, message in app.session.getFlashes() %}
+        <div class="{{ key }}">
+            {{ message|trans({}, 'FOSUserBundle') }}
+        </div>
+        {% endfor %}
+
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+    </body>
+</html>

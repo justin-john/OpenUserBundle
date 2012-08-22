@@ -1,0 +1,44 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+{% if app.user is null %}
+<div class="log_container">
+{% if error %}
+    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+{% endif %}
+<div class="connect_with">
+    {% for owner in hwi_oauth_resource_owners() %}
+    {% if owner | trans({}, 'HWIOAuthBundle') == 'facebook' %}
+       <a href="{{ hwi_oauth_login_url(owner) }}" ><img src="{{ asset('bundles/sewolabsuser/images/fb.jpg') }}" /> </a>
+    {% else %}
+      <!--<a href="{{ hwi_oauth_login_url(owner) }}" ><img src="{{ asset('bundles/sewolabsuser/images/google.jpg') }}" /> </a> <br />-->
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="log_form">
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+   <div class="username_lab"> <label for="username">{{ 'Username/Email'|trans({}, 'FOSUserBundle') }}</label></div>
+    <div class="username_textbox"> <input type="text" id="username" name="_username" value="{{ last_username }}" /></div>
+
+    <div class="password_lab"><label for="password">{{ 'Password'|trans({}, 'FOSUserBundle') }}</label></div>
+    <div class="password_textbox"><input type="password" id="password" name="_password" /></div>
+
+   <div> <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'Remember_me'|trans({}, 'FOSUserBundle') }}</label></div>
+
+    <input type="submit" id="_submit" name="_submit" value="{{ 'Login'|trans({}, 'FOSUserBundle') }}" />
+</form>
+<a href="request">Forgot password?</a>
+<a href="register">Register?</a>
+</div>
+</div>
+{% else %}
+<b> Hi {{ app.user.username }}</b>
+ <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'Logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+  {% endif %}
+
+{% endblock fos_user_content %}

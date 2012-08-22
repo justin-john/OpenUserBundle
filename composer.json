@@ -1,5 +1,5 @@
 {
-    "name": "justin-amt/open-user-bundle",
+    "name": "open/user-bundle",
     "type": "symfony-bundle",
     "description": "Symfony OpenUserbundle",
     "keywords": ["User management, OpenUserbundle"],

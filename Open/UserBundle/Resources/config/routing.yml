@@ -1,3 +1,0 @@
-SewolabsUserBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: SewolabsUserBundle:Default:index }

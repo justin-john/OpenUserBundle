@@ -1,0 +1,27 @@
+{
+    "name": "justin-amt/open-user-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony OpenUserbundle",
+    "keywords": ["User management, OpenUserbundle"],
+    "homepage": "http://friendsofsymfony.github.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justin John",
+            "email": "justin@amt.in"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "2.1.*",
+        "symfony/security-bundle": "2.1.*",
+        "hwi/oauth-bundle": "*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-0": { "Open\\UserBundle": "" }
+    },
+    "target-dir": "open/user-bundle"
+}

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sewolabs\UserBundle\Form\Type;
+namespace Open\UserBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Sewolabs\UserBundle;
+namespace Open\UserBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SewolabsUserBundle extends Bundle
+class OpenUserBundle extends Bundle
 {
 	public function getParent()
     {

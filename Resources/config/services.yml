@@ -1,40 +1,40 @@
 parameters:
-    Sewolabs_user_security.component.authentication.handler.login_success_handler.class: Open\UserBundle\Component\Authentication\Handler\LoginFailureHandler
-    Sewolabs_user_security.component.authentication.handler.logout_success_handler.class: Open\UserBundle\Component\Authentication\Handler\LogoutSuccessHandler
-    sewo_oauth.registration.form.handler.fosub_bridge.class: Open\UserBundle\Form\SewoUBregistrationFormHandler
+    Open_user_security.component.authentication.handler.login_success_handler.class: Open\UserBundle\Component\Authentication\Handler\LoginFailureHandler
+    Open_user_security.component.authentication.handler.logout_success_handler.class: Open\UserBundle\Component\Authentication\Handler\LogoutSuccessHandler
+    open_oauth.registration.form.handler.fosub_bridge.class: Open\UserBundle\Form\OpenUBregistrationFormHandler
     
 services:
-    Sewolabs_user_security.component.authentication.handler.login_success_handler:
-        class:  %Sewolabs_user_security.component.authentication.handler.login_success_handler.class%
+    Open_user_security.component.authentication.handler.login_success_handler:
+        class:  %Open_user_security.component.authentication.handler.login_success_handler.class%
         arguments:  [@service_container, @router, @security.context]
         tags:
             - { name: 'monolog.logger', channel: 'security' } 
-    Sewolabs_user_security.component.authentication.handler.logout_success_handler:
-        class:  %Sewolabs_user_security.component.authentication.handler.logout_success_handler.class%
+    Open_user_security.component.authentication.handler.logout_success_handler:
+        class:  %Open_user_security.component.authentication.handler.logout_success_handler.class%
         arguments:  [@service_container, @router]
         tags:
             - { name: 'monolog.logger', channel: 'security' }
-    sewolabs_user.profile.form.type:
+    open_user.profile.form.type:
         class: Open\UserBundle\Form\Type\ProfileFormType
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: fos_user_profile }
-    sewolabs_user.registration.form.type:
+    open_user.registration.form.type:
         class: Open\UserBundle\Form\Type\RegistrationFormType
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: fos_user_registration }
-    sewolabs_user.resetting.form.type:
+    open_user.resetting.form.type:
         class: Open\UserBundle\Form\Type\ResettingFormType
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: fos_user_resetting }
-    sewo_oauth.registration.form.handler:
-        class:  %sewo_oauth.registration.form.handler.fosub_bridge.class%
+    open_oauth.registration.form.handler:
+        class:  %open_oauth.registration.form.handler.fosub_bridge.class%
         arguments:  [@fos_user.registration.form.handler, @fos_user.user_manager, @fos_user.mailer, @fos_user.util.token_generator]
         scope: request
-#    sewo_oauth.abstract_resource_ownermap:
-#        class:  %sewo_oauth.resource_ownermap.class%
+#    open_oauth.abstract_resource_ownermap:
+#        class:  %open_oauth.resource_ownermap.class%
 #        arguments:  [@service_container, @security.http_utils, %hwi_oauth.resource_owners%, {type: collection}]
 #        scope: request
 

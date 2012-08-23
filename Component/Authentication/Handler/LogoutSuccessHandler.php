@@ -1,6 +1,6 @@
 <?php
 
-namespace Sewolabs\UserBundle\Component\Authentication\Handler;
+namespace Open\UserBundle\Component\Authentication\Handler;
 
 use Symfony\Component\Security\Http\Logout\LogoutSuccessHandlerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;

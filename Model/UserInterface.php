@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sewolabs\UserBundle\Model;
+namespace Open\UserBundle\Model;
 
 use FOS\UserBundle\Model\UserInterface as FOSUserInterface;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;

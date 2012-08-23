@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sewolabs\UserBundle\Model;
+namespace Open\UserBundle\Model;
 
 use FOS\UserBundle\Model\User as FOSUser;
 use Doctrine\Common\Collections\Collection;

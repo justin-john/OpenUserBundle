@@ -9,7 +9,7 @@
 * file that was distributed with this source code.
 */
 
-namespace Sewolabs\UserBundle\Form;
+namespace Open\UserBundle\Form;
 
 use FOS\UserBundle\Model\UserManagerInterface,
     HWI\Bundle\OAuthBundle\Form\FOSUBRegistrationFormHandler,
@@ -30,7 +30,7 @@ use Symfony\Component\Form\Form,
 *
 * @author Justin <justinjohnmathews@gmail.com>
 */
-class SewoUBregistrationFormHandler extends FOSUBRegistrationFormHandler
+class OpenUBregistrationFormHandler extends FOSUBRegistrationFormHandler
 {
 
     /**

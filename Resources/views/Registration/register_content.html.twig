@@ -2,9 +2,9 @@
 <div class="connect_with">
     {% for owner in hwi_oauth_resource_owners() %}
     {% if owner | trans({}, 'HWIOAuthBundle') == 'facebook' %}
-       <a href="{{ hwi_oauth_login_url(owner) }}" ><img src="{{ asset('bundles/sewolabsuser/images/fb.jpg') }}" /> </a>
+       <a href="{{ hwi_oauth_login_url(owner) }}" ><img src="{{ asset('bundles/openuser/images/fb.jpg') }}" /> </a>
     {% else %}
-     <!--  <a href="{{ hwi_oauth_login_url(owner) }}" ><img src="{{ asset('bundles/sewolabsuser/images/google.jpg') }}" /> </a> <br />-->
+     <!--  <a href="{{ hwi_oauth_login_url(owner) }}" ><img src="{{ asset('bundles/openuser/images/google.jpg') }}" /> </a> <br />-->
     {% endif %}
     {% endfor %}
 </div>

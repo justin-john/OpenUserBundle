@@ -1,6 +1,6 @@
 <?php
 
-namespace Sewolabs\UserBundle\Tests\Controller;
+namespace Open\UserBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sewolabs\UserBundle\Controller;
+namespace Open\UserBundle\Controller;
 
 use HWI\Bundle\OAuthBundle\Security\Core\Exception\AccountNotLinkedException;
 
@@ -54,7 +54,7 @@ class ConnectController extends ContainerAware
             $session = $request->getSession();
             $session->set('_hwi_oauth.registration_error.'.$key, $error);
             $this->registrationAction($request, $key);
-            return new RedirectResponse($this->generate('sewolabs_app_url'));
+            return new RedirectResponse($this->generate('open_app_url'));
         }
         $request1 = $this->container->get('request');
         /* @var $request \Symfony\Component\HttpFoundation\Request */
@@ -84,7 +84,7 @@ class ConnectController extends ContainerAware
             $error = $error->getMessage();
         }
 
-        return $this->container->get('templating')->renderResponse('SewolabsUserBundle:Connect:login.html.twig', array(
+        return $this->container->get('templating')->renderResponse('OpenUserBundle:Connect:login.html.twig', array(
             'last_username' => $lastUsername,
             'error'         => $error,
             'csrf_token' => $csrfToken,
@@ -119,7 +119,7 @@ class ConnectController extends ContainerAware
             ->getUserInformation($error->getAccessToken());
 
         $form = $this->container->get('hwi_oauth.registration.form');
-        $formHandler = $this->container->get('sewo_oauth.registration.form.handler');
+        $formHandler = $this->container->get('open_oauth.registration.form.handler');
         if ($formHandler->process($request, $form, $userInformation)) {
             $this->container->get('hwi_oauth.account.connector')->connect($form->getData(), $userInformation);
 
@@ -127,7 +127,7 @@ class ConnectController extends ContainerAware
             $this->authenticateUser($form->getData());
               
 
-            return $this->container->get('templating')->renderResponse('SewolabsUserBundle:Connect:registration_success.html.twig', array(
+            return $this->container->get('templating')->renderResponse('OpenUserBundle:Connect:registration_success.html.twig', array(
                 'userInformation' => $userInformation,
             ));
         }
@@ -136,7 +136,7 @@ class ConnectController extends ContainerAware
         $key = time();
         $session->set('_hwi_oauth.registration_error.'.$key, $error);
 
-        return $this->container->get('templating')->renderResponse('SewolabsUserBundle:Connect:registration.html.twig', array(
+        return $this->container->get('templating')->renderResponse('OpenUserBundle:Connect:registration.html.twig', array(
             'key' => $key,
             'form' => $form->createView(),
             'userInformation' => $userInformation,
@@ -195,13 +195,13 @@ class ConnectController extends ContainerAware
 
                 $this->container->get('hwi_oauth.account.connector')->connect($user, $userInformation);
 
-                return $this->container->get('templating')->renderResponse('SewolabsUserBundle:Connect:connect_success.html.twig', array(
+                return $this->container->get('templating')->renderResponse('OpenUserBundle:Connect:connect_success.html.twig', array(
                     'userInformation' => $userInformation,
                 ));
             }
         }
 
-        return $this->container->get('templating')->renderResponse('SewolabsUserBundle:Connect:connect_confirm.html.twig', array(
+        return $this->container->get('templating')->renderResponse('OpenUserBundle:Connect:connect_confirm.html.twig', array(
             'key' => $key,
             'service' => $service,
             'form' => $form->createView(),
@@ -295,7 +295,7 @@ class ConnectController extends ContainerAware
         $this->container->get('security.context')->setToken($token);
     }
 
-    public function sewoAction(Request $request)
+    public function openAction(Request $request)
     {   $this->authenticateUser($form->getData());
         echo $request->getSession()->get(SecurityContext::LAST_USERNAME);
         echo 'sucess'; exit;

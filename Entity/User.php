@@ -1,7 +1,7 @@
 <?php
 // src/Acme/UserBundle/Entity/User.php
 
-namespace Sewolabs\UserBundle\Entity;
+namespace Open\UserBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;

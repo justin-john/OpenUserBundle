@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sewolabs\UserBundle\OAuth\Response;
+namespace Open\UserBundle\OAuth\Response;
 
 use HWI\Bundle\OAuthBundle\OAuth\Response\AdvancedPathUserResponse as HWIAdvancedPathUserResponse;
 

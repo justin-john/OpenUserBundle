@@ -1,9 +1,9 @@
 {
-    "name": "justin-amt/open-user-bundle",
+    "name": "open/user-bundle",
     "type": "symfony-bundle",
     "description": "Symfony OpenUserbundle",
     "keywords": ["User management, OpenUserbundle"],
-    "homepage": "http://friendsofsymfony.github.com",
+    "homepage": "https://github.com/justin-amt/OpenUserBundle",
     "license": "MIT",
     "authors": [
         {

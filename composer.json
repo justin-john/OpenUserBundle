@@ -26,5 +26,5 @@
     "autoload": {
         "psr-0": { "Open\\UserBundle": "" }
     },
-    "target-dir": "open/user-bundle"
+    "target-dir": "Open/UserBundle"
 }

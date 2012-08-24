@@ -16,7 +16,9 @@
         "php": ">=5.3.2",
         "symfony/framework-bundle": "2.1.*",
         "symfony/security-bundle": "2.1.*",
-        "hwi/oauth-bundle": "*"
+        "hwi/oauth-bundle": "*",
+        "friendsofsymfony/user-bundle": "*",
+        "symfony/twig-bundle": "*"
     },
     "require-dev": {
         "hwi/oauth-bundle": "*"

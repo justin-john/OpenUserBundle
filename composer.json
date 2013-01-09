@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony OpenUserbundle",
     "keywords": ["User management, OpenUserbundle"],
-    "homepage": "https://github.com/justin-amt/OpenUserBundle",
+    "homepage": "https://github.com/Justin-John/OpenUserBundle",
     "license": "MIT",
     "authors": [
         {

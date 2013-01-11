@@ -38,12 +38,12 @@ This bundle is under the MIT license. See the complete license in the bundle:
 About
 -----
 
-See also the list of [contributors](https://github.com/Justin-John/OpenUserBundle/graphs/contributors).
+See also the list of [contributors](https://github.com/justin-john/OpenUserBundle/graphs/contributors).
 
 Reporting an issue or a feature request
 ---------------------------------------
 
-Issues and feature requests are tracked in the [Github issue tracker](https://github.com/Justin-John/OpenUserBundle/issues).
+Issues and feature requests are tracked in the [Github issue tracker](https://github.com/justin-john/OpenUserBundle/issues).
 
 When reporting a bug, it may be a good idea to reproduce it in a basic project
 built using the [Symfony Standard Edition](https://github.com/symfony/symfony-standard)

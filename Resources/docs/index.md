@@ -26,7 +26,7 @@ Now tell composer to download the bundle by running the command:
 $ php composer.phar update 
 ```
 
-Composer will install the bundle to your project's `sewolabs` directory.
+Composer will install the bundle to your project's `open` directory.
 
 ### Step 2: Enable the bundle
 
@@ -268,10 +268,10 @@ facebook_login:
 google_login:
     pattern: /user/login/check-google
 
-sewolabs_app_urlfacebook:
+open_app_urlfacebook:
     pattern:  /user/connect/facebook
 
-sewolabs_app_urlgoogle:
+open_app_urlgoogle:
     pattern:  /user/connect/google
 ```
 

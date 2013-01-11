@@ -24,5 +24,7 @@ class OpenUserExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+    	$container->setParameter('open_oauth.firewall_name', $config);
+        
     }
 }

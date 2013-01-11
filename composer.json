@@ -3,12 +3,12 @@
     "type": "symfony-bundle",
     "description": "Symfony OpenUserbundle",
     "keywords": ["User management, OpenUserbundle"],
-    "homepage": "https://github.com/Justin-John/OpenUserBundle",
+    "homepage": "https://github.com/justin-john/OpenUserBundle",
     "license": "MIT",
     "authors": [
         {
-            "name": "Justin John",
-            "email": "justin@amt.in"
+            "name": "Justin John Mathews",
+            "email": "justinjohnmathews@gmail.com"
         }
     ],
     "minimum-stability": "dev",

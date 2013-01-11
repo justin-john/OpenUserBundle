@@ -12,6 +12,8 @@
 namespace Open\UserBundle\Controller;
 
 use HWI\Bundle\OAuthBundle\Security\Core\Exception\AccountNotLinkedException;
+use Open\UserBundle\Entity\user;
+
 
 use Symfony\Component\DependencyInjection\ContainerAware,
 Symfony\Component\HttpFoundation\Request,
@@ -53,8 +55,8 @@ class ConnectController extends ContainerAware
             $key = time();
             $session = $request->getSession();
             $session->set('_hwi_oauth.registration_error.'.$key, $error);
-            $this->registrationAction($request, $key);
-            return new RedirectResponse($this->generate('open_app_url'));
+			  $this->registrationAction($request, $key);
+            return new RedirectResponse($this->generate('open_app_url'.$error->getResourceOwnerName()));
         }
         $request1 = $this->container->get('request');
         /* @var $request \Symfony\Component\HttpFoundation\Request */
@@ -181,7 +183,6 @@ class ConnectController extends ContainerAware
         }
 
         $userInformation = $resourceOwner->getUserInformation($accessToken);
-
         // Handle the form
         $form = $this->container->get('form.factory')
             ->createBuilder('form')
@@ -237,7 +238,6 @@ class ConnectController extends ContainerAware
         } else {
             $error = '';
         }
-
         return $error;
     }
 
@@ -294,14 +294,5 @@ class ConnectController extends ContainerAware
 
         $this->container->get('security.context')->setToken($token);
     }
-
-    public function openAction(Request $request)
-    {   $this->authenticateUser($form->getData());
-        echo $request->getSession()->get(SecurityContext::LAST_USERNAME);
-        echo 'sucess'; exit;
-		echo $error;
-    }
-
-
 
 }

@@ -1,5 +1,4 @@
 <?php
-// src/Acme/UserBundle/Entity/User.php
 
 namespace Open\UserBundle\Entity;
 
@@ -44,6 +43,14 @@ class User extends BaseUser
         return $this->facebookId;
     }
 
+	/**
+     * @return string
+     */
+    public function getGoogleId()
+    {
+        return $this->googleId;
+    }
+
 	 /**
      * Sets the facebookId.
      *
@@ -57,4 +64,18 @@ class User extends BaseUser
 
         return $this;
     }
+	 /**
+     * Sets the googleId.
+     *
+     * @param string $googleId
+     *
+     * @return User
+     */
+    public function setGoogleId($googleId)
+    {
+        $this->googleId = $googleId;
+
+        return $this;
+    }
+	
 }

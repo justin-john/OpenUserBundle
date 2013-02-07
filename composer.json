@@ -2,7 +2,7 @@
     "name": "open/user-bundle",
     "type": "symfony-bundle",
     "description": "OpenUserbundle based on Symfony2",
-    "keywords": ["User management, OpenUserbundle"],
+    "keywords": ["User management", "OpenUserbundle"],
     "homepage": "https://github.com/justin-john/OpenUserBundle",
     "license": "MIT",
     "authors": [

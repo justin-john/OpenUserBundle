@@ -19,6 +19,9 @@ Add OpenUserBundle in your composer.json:
     }
 }
 ```
+If you haven't allready done so, get Composer.
+
+    curl -s http://getcomposer.org/installer | php
 
 Now tell composer to download the bundle by running the command:
 
